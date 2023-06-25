@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Navbar from './components/Navbar';
+import Shop from './components/Shop';
+import Products from './components/Products';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Navbar />
+     
+     <h2 className='mt-3 text-center'>Buy each shoes for 1000 ruppes only</h2>
+    
+     <div style={{display:"flex" , justifyContent:"space-around"}}>
+      <Shop/>
+     <Products/>
+     </div>
+
     </div>
   );
 }
